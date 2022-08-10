@@ -5,7 +5,8 @@ public class Date {
 
 
 
-        public static void main(String[] args) {
+        public static void main(String[] args)
+        {
             int d, m, y;
             Scanner s = new Scanner(System.in);
             System.out.println("enter date in day month year:");
