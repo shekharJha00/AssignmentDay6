@@ -27,5 +27,14 @@ public class util {
                 double payment = p * r0 / (1 - Math.pow((1 + r0), -n));
                 return payment;
             }
-}
+    static double sqrt(double c) {
+
+        double t = c;
+        double epsilon = 1e-15;
+        while (Math.abs(t - c / t) > epsilon * t) {
+            t = (c / t + t) / 2;
+        }
+
+        return t;
+    }}
 
