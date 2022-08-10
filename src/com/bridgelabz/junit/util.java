@@ -6,8 +6,7 @@ public class util {
         int y0 = y - (14 - m) / 12;
         int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
         int m0 = m + 12 * ((14 - m) / 12) - 2;
-        int i = (d + x + (31 * m0) / 12) % 7;
-        return i;
+        return (d + x + (31 * m0) / 12) % 7;
     }
         static int temperaturConversion(int tem, char t) {
             int conver;
@@ -21,5 +20,12 @@ public class util {
 
             }
             return conver;
-        }}
+
+        }            static double monthlyPayment(double p, double y, double r) {
+                double n = 12 * y;
+                double r0 = r / (12 * 100);
+                double payment = p * r0 / (1 - Math.pow((1 + r0), -n));
+                return payment;
+            }
+}
 
